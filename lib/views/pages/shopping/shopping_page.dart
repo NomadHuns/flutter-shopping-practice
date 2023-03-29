@@ -10,11 +10,14 @@ class ShoppingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Container(
+        color: Color(0xFFeeeeee),
         child: Column(
           children: [
-            ShoppingCartHeader(),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ShoppingCartHeader(),
+            ),
             ShoppingCartDetail(),
           ],
         ),

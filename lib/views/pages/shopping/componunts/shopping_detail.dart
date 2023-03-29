@@ -5,25 +5,45 @@ class ShoppingCartDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _detailNameAndPrice(),
-        SizedBox(height: 10),
-        _detailRatingAndReviewCount(),
-        SizedBox(height: 20),
-        _detailColorOptions(),
-        SizedBox(height: 20),
-        _addCartButton(),
-      ],
+    return Container(
+      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 40),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(40),
+      ),
+      child: Column(
+        children: [
+          SizedBox(height: 20),
+          _detailNameAndPrice(),
+          SizedBox(height: 10),
+          _detailRatingAndReviewCount(),
+          SizedBox(height: 20),
+          _detailColorOptions(),
+          SizedBox(height: 20),
+          _addCartButton(),
+        ],
+      ),
     );
   }
 
   Row _detailNameAndPrice() {
     return Row(
       children: [
-        Text("Urban Soft AL 10.0"),
+        Text(
+          "Urban Soft AL 10.0",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         Spacer(),
-        Text("\$699"),
+        Text(
+          "\$699",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
     );
   }
@@ -53,7 +73,7 @@ class ShoppingCartDetail extends StatelessWidget {
         ),
         Spacer(),
         Text("review"),
-        Text("(26)"),
+        Text("(26)", style: TextStyle(color: Colors.blue)),
       ],
     );
   }
@@ -61,7 +81,10 @@ class ShoppingCartDetail extends StatelessWidget {
   TextButton _addCartButton() {
     return TextButton(
       onPressed: () {},
-      child: Text("Add Cart"),
+      child: Text(
+        "Add Cart",
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 
@@ -73,22 +96,22 @@ class ShoppingCartDetail extends StatelessWidget {
         SizedBox(height: 10),
         Row(
           children: [
-            _detailColorOptionIcon(),
+            _detailColorOptionIcon(Colors.black),
             Spacer(),
-            _detailColorOptionIcon(),
+            _detailColorOptionIcon(Colors.yellow),
             Spacer(),
-            _detailColorOptionIcon(),
+            _detailColorOptionIcon(Colors.pink),
             Spacer(),
-            _detailColorOptionIcon(),
+            _detailColorOptionIcon(Colors.deepPurple),
             Spacer(),
-            _detailColorOptionIcon(),
+            _detailColorOptionIcon(Colors.lightBlueAccent),
           ],
         ),
       ],
     );
   }
 
-  Widget _detailColorOptionIcon() {
+  Widget _detailColorOptionIcon(Color color) {
     return Stack(
       children: [
         Container(
@@ -105,7 +128,7 @@ class ShoppingCartDetail extends StatelessWidget {
           top: 5,
           child: ClipOval(
             child: Container(
-              color: Colors.black,
+              color: color,
               width: 40,
               height: 40,
             ),

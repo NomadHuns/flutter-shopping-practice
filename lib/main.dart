@@ -13,6 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ShoppingPage(),
+      theme: ThemeData(
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            backgroundColor: Color(0xFFff7643),
+            minimumSize: Size(300, 50),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
+          )
+        )
+      ),
     );
   }
 }
