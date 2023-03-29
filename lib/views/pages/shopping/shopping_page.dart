@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/constants.dart';
 import 'componunts/shopping_detail.dart';
 import 'componunts/shopping_header.dart';
 
@@ -11,7 +12,7 @@ class ShoppingPage extends StatelessWidget {
     return Scaffold(
       appBar: _appBar(),
       body: Container(
-        color: Color(0xFFeeeeee),
+        color: kPrimaryColor,
         child: Column(
           children: [
             Padding(

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_shoppingcart/core/constants.dart';
 
 class ShoppingCartHeader extends StatelessWidget {
   const ShoppingCartHeader({Key? key}) : super(key: key);
@@ -14,14 +15,14 @@ class ShoppingCartHeader extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             children: [
-              _headerButton(Icon(Icons.directions_bike), Color(0xFFff7643)),
+              _headerButton(Icon(Icons.directions_bike), kAccentColor),
               Spacer(),
-              _headerButton(Icon(Icons.motorcycle), Color(0xFFc6c6c6)),
+              _headerButton(Icon(Icons.motorcycle), kSecondaryColor),
               Spacer(),
               _headerButton(
-                  Icon(CupertinoIcons.car_detailed), Color(0xFFc6c6c6)),
+                  Icon(CupertinoIcons.car_detailed), kSecondaryColor),
               Spacer(),
-              _headerButton(Icon(CupertinoIcons.airplane), Color(0xFFc6c6c6)),
+              _headerButton(Icon(CupertinoIcons.airplane), kSecondaryColor),
             ],
           ),
         ),
