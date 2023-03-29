@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ShoppingCartDetail extends StatelessWidget {
@@ -20,7 +21,7 @@ class ShoppingCartDetail extends StatelessWidget {
           SizedBox(height: 20),
           _detailColorOptions(),
           SizedBox(height: 20),
-          _addCartButton(),
+          _addCartButton(context),
         ],
       ),
     );
@@ -78,9 +79,30 @@ class ShoppingCartDetail extends StatelessWidget {
     );
   }
 
-  TextButton _addCartButton() {
+  Widget _addCartButton(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        showCupertinoDialog(
+          context: context,
+          builder: (context) => CupertinoAlertDialog(
+            title: Text("장바구니에 담으시겠습니까?"),
+            actions: [
+              CupertinoDialogAction(
+                child: Text("확인"),
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+              ),
+              CupertinoDialogAction(
+                child: Text("취소"),
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        );
+      },
       child: Text(
         "Add Cart",
         style: TextStyle(color: Colors.white),
