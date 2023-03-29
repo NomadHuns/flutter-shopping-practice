@@ -9,7 +9,19 @@ class ShoppingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.shopping_cart, color: Colors.black),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           ShoppingCartHeader(),
@@ -19,6 +31,3 @@ class ShoppingPage extends StatelessWidget {
     );
   }
 }
-
-
-
