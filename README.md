@@ -1,16 +1,13 @@
-# flutter_shoppingcart
+# 플러터로 쇼핑카드 앱 만들기 연습
 
-A new Flutter project.
+## 완성 그림
 
-## Getting Started
+![image](https://user-images.githubusercontent.com/118786401/228438201-0f9bab3d-db21-4194-842c-1662429089af.png)
 
-This project is a starting point for a Flutter application.
+## 시연 화면
 
-A few resources to get you started if this is your first Flutter project:
+### 헤더 사진 변경
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/118786401/228441530-47ec902d-ea22-43c5-9efc-ffaaf8a6a32e.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 경고창 메세지 출력
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/118786401/228443101-9778c85b-1439-49f6-80c8-e355be35be55.gif)
